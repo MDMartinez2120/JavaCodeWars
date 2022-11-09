@@ -106,6 +106,33 @@ public class Solutions {
         }
 
     }
+    ///////////////////////////////////////////////////////////////////
+    public class Troll {
+        public static String disemvowel(String str) {
+            return str.replaceAll("[aeiouAEIOU]", "");
+        }
+    }
+    ///////////////////////////////////////////////////////////////////
+    public class Vowels {
+
+        public static int getCount(String str) {
+            int count = 0;
+
+            for (int i = 0; i < str.length(); i++){
+                if (str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u')
+                    count++;
+            }
+            return count;
+        }
+
+    }
+    ///////////////////////////////////////////////////////////////////
+    public static String swap(String st){
+
+        return st.replaceAll("a", "A").replaceAll("e", "E").replaceAll("i", "I").replaceAll("o", "O").replaceAll("u", "U");
+
+    }
+    ///////////////////////////////////////////////////////////////////
 
     public static void main(String[] args) {
 

@@ -133,6 +133,33 @@ public class Solutions {
 
     }
     ///////////////////////////////////////////////////////////////////
+    public class Square {
+        public static boolean isSquare(int n) {
+            if (Math.ceil((double)Math.sqrt(n)) ==
+                    Math.floor((double)Math.sqrt(n))){
+                return true;
+            }else {
+                return false;
+            }
+        }
+    }
+    ///////////////////////////////////////////////////////////////////
+     public static String highAndLow(String numbers) {
+            String[] array = numbers.split(" ");
+            String highest = array[0];
+            String lowest = array[0];
+
+            for (int i = 0; i < array.length; i++){
+                if (Integer.parseInt(highest) <= Integer.parseInt(array[i])){
+                    highest = array[i];
+                }else if(Integer.parseInt(lowest) >= Integer.parseInt(array[i])){
+                    lowest = array[i];
+                }
+            }
+            return (highest + " " + lowest);
+        }
+
+    ///////////////////////////////////////////////////////////////////
 
     public static void main(String[] args) {
 

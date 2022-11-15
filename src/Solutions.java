@@ -160,6 +160,34 @@ public class Solutions {
         }
 
     ///////////////////////////////////////////////////////////////////
+    public class Movie {
+
+        public static int movie(int card, int ticket, double perc) {
+            int visits = 0;
+            double systemA = 0;
+            double systemB = card;
+
+            while (Math.ceil(systemB) >= systemA) {
+                visits++;
+                systemA += ticket;
+                systemB += ticket * Math.pow(perc, visits);
+            }
+            return visits;
+        }
+    }
+    ///////////////////////////////////////////////////////////////////
+    public class XO {
+
+        public static boolean getXO (String str) {
+
+            String xValues = str.replaceAll("[^xX]", "");
+            String oValues = str.replaceAll("[^oO]", "");
+
+            return xValues.length() == oValues.length();
+
+        }
+    }
+    ///////////////////////////////////////////////////////////////////
 
     public static void main(String[] args) {
 

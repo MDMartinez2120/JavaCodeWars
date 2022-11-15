@@ -188,6 +188,34 @@ public class Solutions {
         }
     }
     ///////////////////////////////////////////////////////////////////
+    public class FindDivisor {
+
+        public long numberOfDivisors(int n) {
+            long counter = 0;
+
+            for (int i = 1; i <= n; i++){
+                if (n % i == 0){
+                    counter++;
+                }
+            }
+            return counter;
+        }
+
+    }
+    ///////////////////////////////////////////////////////////////////
+    public class Solution {
+
+        public static boolean isAscOrder(int[] arr) {
+            for (int i = 0; i < arr.length-1; i++){
+                if (arr[i] >= arr[i+1]){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+    }
+    ///////////////////////////////////////////////////////////////////
 
     public static void main(String[] args) {
 

@@ -1,3 +1,5 @@
+import java.util.stream.Collectors;
+
 public class Solutions {
 
     public class CodeWars {
@@ -214,6 +216,24 @@ public class Solutions {
             return true;
         }
 
+    }
+    ///////////////////////////////////////////////////////////////////
+    public static String toAlternativeString(String string) {
+        return String.join("", string.chars().mapToObj(c -> Character.isLetter(c) ? Character.isLowerCase​(c) ? (""+(char) Character.toUpperCase​(c)) :  (""+ (char)Character.toLowerCase​(c)) :  (""+ (char) c)).collect(Collectors.toList()));
+    }
+    ///////////////////////////////////////////////////////////////////
+    public class StringToNumber {
+        public static int stringToNumber(String str) {
+            int convert =Integer.parseInt(str);
+            return convert;
+        }
+    }
+    ///////////////////////////////////////////////////////////////////
+    class SolutionRemove {
+        static String removeExclamationMarks(String s) {
+            String removed = s.replaceAll("!", "");
+            return removed;
+        }
     }
     ///////////////////////////////////////////////////////////////////
 

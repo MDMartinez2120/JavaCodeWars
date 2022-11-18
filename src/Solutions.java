@@ -236,6 +236,33 @@ public class Solutions {
         }
     }
     ///////////////////////////////////////////////////////////////////
+    public class HelpAlex{
+        public static String hoopCount(int n){
+            String good = "Great, now move on to tricks";
+            String alright = "Keep at it until you get it";
+            if (n < 10){
+                return alright;
+            }else {
+                return good;
+            }
+        }
+    }
+    ///////////////////////////////////////////////////////////////////
+    public class OppositesAttract {
+
+        public static boolean isLove(final int flower1, final int flower2) {
+            boolean petals1 = (flower1 % 2) == 0;
+            boolean petals2 = (flower2 % 2) == 0;
+
+            if (petals1 != petals2) {
+                return true;
+            }
+            return false;
+
+        }
+
+    }
+    ///////////////////////////////////////////////////////////////////
 
     public static void main(String[] args) {
 

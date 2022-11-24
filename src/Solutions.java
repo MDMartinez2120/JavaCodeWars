@@ -274,7 +274,37 @@ public class Solutions {
         }
     }
     ///////////////////////////////////////////////////////////////////
+    public class SquareDigit {
 
+        public int squareDigits(int n) {
+            String strng = n + "";
+            String[] digits = strng.split("");
+            String output = "";
+
+            for (String str : digits) {
+                int i = Integer.parseInt(str);
+                output +=  i * i;
+            }
+            return Integer.parseInt(output);
+        }
+
+    }
+
+    ///////////////////////////////////////////////////////////////////
+    public class DescendingOrder {
+
+        public static int sortDesc(final int num) {
+            char[] splitNums = Integer.toString(num).toCharArray();
+            Arrays.sort(splitNums);
+
+            char[] orderedNums = new char[splitNums.length];
+            for (int i = splitNums.length -1, j = 0; i >= 0; i--, j++){
+                orderedNums[j] = splitNums[i];
+            }
+            return Integer.parseInt(new String(orderedNums));
+        }
+
+    }
     ///////////////////////////////////////////////////////////////////
 
     public static void main(String[] args) {

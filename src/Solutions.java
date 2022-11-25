@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public class Solutions {
@@ -306,7 +307,36 @@ public class Solutions {
 
     }
     ///////////////////////////////////////////////////////////////////
+    public class Solution {
 
+        public int solution(int number) {
+            int total = 0;
+
+            for (int i = 1; i < number; i++){
+                if (i % 3 == 0 && i % 5 == 0){
+                    total += i;
+                }else if (i % 3 == 0 || i % 5 == 0){
+                    total += i;
+                }
+
+            }
+            return total;
+        }
+
+    }
+    ///////////////////////////////////////////////////////////////////
+    public class SpinWords {
+
+        public String spinWords(String sentence) {
+            String out = null;
+            String[] array = sentence.split(" ");
+            for (int i = 0; i <= array.length - 1; i++) {
+                array[i] = array[i].length() >= 5 ? array[i] = new StringBuffer(array[i]).reverse().toString() : array[i];
+            }
+            out = Arrays.toString(array);
+            return out = out.substring(1, out.length() - 1).replaceAll(",", "");
+        }
+    }
     ///////////////////////////////////////////////////////////////////
 
     public static void main(String[] args) {

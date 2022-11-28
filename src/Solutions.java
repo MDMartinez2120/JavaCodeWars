@@ -355,6 +355,46 @@ public class Solutions {
         return word.substring(position, position + length);
     }
     ///////////////////////////////////////////////////////////////////
+    public class FindOdd {
+        public static int findIt(int[] a) {
+
+            for(int i = 0; i < a.length; i++){
+                int num = a[i];
+                int count = 0;
+
+                for (int j = 0; j < a.length; j++){
+                    if (a[j] == num){
+                        count++;
+                    }
+                }
+
+                if (count % 2 != 0){
+                    return num;
+                }
+
+            }
+
+            return 0;
+        }
+    }
+    ///////////////////////////////////////////////////////////////////
+    public static String whoLikesIt(String... names) {
+        int length = names.length;
+
+        switch(length){
+            case 0:
+                return "no one likes this";
+            case 1:
+                return String.format("%s likes this", names[0]);
+            case 2:
+                return String.format("%s and %s like this", names[0], names[1]);
+            case 3:
+                return String.format("%s, %s and %s like this", names[0], names[1], names[2]);
+            default:
+                return String.format("%s, %s and %d others like this", names[0], names[1], length-2);
+        }
+    }
+    ///////////////////////////////////////////////////////////////////
 
     public static void main(String[] args) {
 
